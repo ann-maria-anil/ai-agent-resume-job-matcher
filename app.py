@@ -214,17 +214,19 @@ if "resume_data" in st.session_state:
     # ----------------------------
     # LINKEDIN BUTTON
     # ----------------------------
+    import urllib.parse
+
     if st.button("🔎 Find Jobs on LinkedIn"):
-
+    
         roles = data.get("primary_roles", [])
-        experience = data.get("experience_level", "")
-        industries = data.get("industries", [])
-
         role_query = " OR ".join(roles[:3]) if roles else ""
-        industry = industries[0] if industries else ""
-
-        with st.spinner(" Searching LinkedIn for the best matching roles... Please wait..."):
-
-            asyncio.run(
-                open_linkedin_jobs(role_query, experience, industry)
-            )
+    
+        query = urllib.parse.quote(role_query)
+    
+        linkedin_url = f"https://www.linkedin.com/jobs/search/?keywords={query}"
+    
+        st.success("Best matching jobs found on LinkedIn!")
+    
+        st.markdown(
+            f"👉 **[Click here to open LinkedIn Jobs]({linkedin_url})**"
+        )
