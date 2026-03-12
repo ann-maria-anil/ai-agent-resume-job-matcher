@@ -43,18 +43,6 @@ This project combines **Generative AI**, **resume parsing**, and **browser autom
 
 ---
 
-##  Project Structure
-
-ai-resume-job-matcher
-│
-├── app.py
-├── linkedin_agent.py
-├── requirements.txt
-├── Capture.PNG
-├── .gitignore
-└── README.md
-
----
 
 ## Installation
 
