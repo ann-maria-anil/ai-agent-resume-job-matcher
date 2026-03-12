@@ -1,0 +1,15 @@
+streamlit
+google-genai
+python-dotenv
+
+# File handling
+pdfplumber
+python-docx
+
+# AI Agent
+browser-use
+playwright
+
+# Optional but commonly needed
+requests
+pydantic
